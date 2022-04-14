@@ -103,7 +103,6 @@ alias unhitch='hitch -u'
 alias vi='vim'
 alias openwork='vim -p $(git ls-files -m) $(git ls-files --others --exclude-standard)'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/bin # Make personal scripts available
 PATH=$PATH:$HOME/.bin # Make dotfiles scripts available
 
@@ -138,6 +137,4 @@ if [ ! -f "$HOME/.tmux/user.conf" ]; then
   touch $HOME/.tmux/user.conf
 fi
 
-# RVM is a silly thing. This fixes tmux not loading gemset
-# http://stackoverflow.com/a/6097090/3010499
-cd .
+eval "$(rbenv init - zsh)"
