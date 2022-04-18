@@ -137,4 +137,6 @@ if [ ! -f "$HOME/.tmux/user.conf" ]; then
   touch $HOME/.tmux/user.conf
 fi
 
-eval "$(rbenv init - zsh)"
+if [[ -s "$HOME/.rbenv" ]]; then
+  eval "$(rbenv init - zsh)"
+fi
