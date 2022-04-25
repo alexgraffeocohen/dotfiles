@@ -43,6 +43,8 @@ Plug 'https://github.com/tsaleh/vim-align'
 Plug 'https://github.com/vim-ruby/vim-ruby'
 Plug 'https://github.com/vim-scripts/DeleteTrailingWhitespace'
 Plug 'https://github.com/vim-scripts/ShowTrailingWhitespace'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 if filereadable(glob("~/.vim/local/vimplug"))
   source ~/.vim/local/vimplug
